@@ -1,0 +1,26 @@
+In order to build the heightmap viewer you'll need boost and
+Irrlicht. These libraries haven't been included to avoid redundancy,
+old libraries and save space:
+
+* libIrrlicht 1.8.0
+* Irrlicht 1.8.0 headers
+* libboost_filesystem 1.54.0
+* libboost_system 1.54.0
+* libboost_program_options 1.54.0
+
+(Newer versions of the libraries should also work.)
+
+Boost and Irrlicht can be downloaded here:
+* http://irrlicht.sourceforge.net/downloads/
+* http://www.boost.org/users/download/
+
+If you don't want to change the Makefile, create a folder lib/ and
+place both libIrrlicht.a and the irrlicht include/ folder there. The
+boost libraries go in lib/boost1_54_0_installed_lib.
+
+Otherwise, just point LIBINCLUDE to the place where you put your
+libraries. Set LIRR to the position of libIrrlicht.a and change the
+paths of the boost .so files in LBOOST. If you have installed these
+libraries on your system it should be sufficient to add the following
+parameters to LDFLAGS: -lIrricht -lboost_filesystem -lboost_system
+-lboost_program_options (LIRR and LBOOST can be removed in this case).

@@ -1,0 +1,5 @@
+* TODO Parameters for 
+  + camera speed
+  + terrain height scaling
+
+* TODO A key to reload the heightmap file
